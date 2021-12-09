@@ -81,6 +81,7 @@
   "keywords": [
     "amazon",
     "aws",
+    "aws-cdk",
     "cdk",
     "ci-cd",
     "codedeploy",
