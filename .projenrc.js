@@ -13,6 +13,7 @@ const project = new AwsCdkConstructLibrary({
   gitignore: ['.DS_Store', '!/LICENSE', '/.vscode/'],
   npmignore: ['/example'],
   keywords: [
+    'aws-cdk',
     'deploy',
     'codedeploy',
     'ci-cd',
