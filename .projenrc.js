@@ -1,11 +1,11 @@
-const { AwsCdkConstructLibrary } = require('projen');
+const { awscdk } = require('projen');
 
-const project = new AwsCdkConstructLibrary({
+const project = new awscdk.AwsCdkConstructLibrary({
   name: 'cdk-deployer',
   description: 'A construct library for deploying artifacts via CodeDeploy inside of a AWS CDK application.',
   authorName: 'Jeff Gardner',
   majorVersion: 1,
-  cdkVersion: '1.116.0',
+  cdkVersion: '1.173.0',
   defaultReleaseBranch: 'main',
   cdkDependenciesAsDeps: false,
   repositoryUrl: 'https://github.com/cdklabs/cdk-deployer',
@@ -20,7 +20,7 @@ const project = new AwsCdkConstructLibrary({
     'aws',
     'amazon',
   ],
-  cdkDependencies: [
+  deps: [
     '@aws-cdk/aws-autoscaling',
     '@aws-cdk/aws-codedeploy',
     '@aws-cdk/aws-ec2',
