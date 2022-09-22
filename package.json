@@ -6,27 +6,29 @@
     "url": "https://github.com/cdklabs/cdk-deployer"
   },
   "scripts": {
-    "clobber": "npx projen clobber",
-    "compile": "npx projen compile",
-    "test:compile": "npx projen test:compile",
-    "test": "npx projen test",
     "build": "npx projen build",
-    "test:watch": "npx projen test:watch",
-    "test:update": "npx projen test:update",
     "bump": "npx projen bump",
-    "unbump": "npx projen unbump",
-    "publish:github": "npx projen publish:github",
-    "upgrade": "npx projen upgrade",
-    "upgrade-projen": "npx projen upgrade-projen",
-    "default": "npx projen default",
-    "watch": "npx projen watch",
-    "package": "npx projen package",
-    "eslint": "npx projen eslint",
+    "clobber": "npx projen clobber",
     "compat": "npx projen compat",
-    "publish:npm": "npx projen publish:npm",
-    "publish:pypi": "npx projen publish:pypi",
+    "compile": "npx projen compile",
+    "default": "npx projen default",
     "docgen": "npx projen docgen",
+    "eject": "npx projen eject",
+    "eslint": "npx projen eslint",
+    "package": "npx projen package",
+    "package-all": "npx projen package-all",
+    "package:js": "npx projen package:js",
+    "package:python": "npx projen package:python",
+    "post-compile": "npx projen post-compile",
+    "post-upgrade": "npx projen post-upgrade",
+    "pre-compile": "npx projen pre-compile",
     "release": "npx projen release",
+    "test": "npx projen test",
+    "test:update": "npx projen test:update",
+    "test:watch": "npx projen test:watch",
+    "unbump": "npx projen unbump",
+    "upgrade": "npx projen upgrade",
+    "watch": "npx projen watch",
     "projen": "npx projen"
   },
   "author": {
@@ -34,50 +36,44 @@
     "organization": false
   },
   "devDependencies": {
-    "@aws-cdk/assert": "^1.116.0",
-    "@aws-cdk/aws-autoscaling": "^1.116.0",
-    "@aws-cdk/aws-codedeploy": "^1.116.0",
-    "@aws-cdk/aws-ec2": "^1.116.0",
-    "@aws-cdk/aws-iam": "^1.116.0",
-    "@aws-cdk/aws-lambda": "^1.116.0",
-    "@aws-cdk/aws-s3": "^1.116.0",
-    "@aws-cdk/aws-s3-assets": "^1.116.0",
-    "@aws-cdk/core": "^1.116.0",
-    "@aws-cdk/custom-resources": "^1.116.0",
-    "@types/jest": "^26.0.24",
-    "@types/node": "^14.17.0",
-    "@typescript-eslint/eslint-plugin": "^4.33.0",
-    "@typescript-eslint/parser": "^4.33.0",
-    "eslint": "^7.32.0",
+    "@aws-cdk/assert": "^1.173.0",
+    "@aws-cdk/assertions": "^1.173.0",
+    "@types/jest": "^27",
+    "@types/node": "^14",
+    "@typescript-eslint/eslint-plugin": "^5",
+    "@typescript-eslint/parser": "^5",
+    "eslint": "^8",
     "eslint-import-resolver-node": "^0.3.6",
-    "eslint-import-resolver-typescript": "^2.5.0",
-    "eslint-plugin-import": "^2.25.3",
-    "jest": "^27.4.5",
-    "jest-junit": "^12",
-    "jsii": "^1.49.0",
-    "jsii-diff": "^1.49.0",
+    "eslint-import-resolver-typescript": "^2.7.1",
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "^27",
+    "jest-junit": "^13",
+    "jsii": "^1.67.0",
+    "jsii-diff": "^1.67.0",
     "jsii-docgen": "^3.8.31",
-    "jsii-pacmak": "^1.49.0",
+    "jsii-pacmak": "^1.67.0",
     "json-schema": "^0.4.0",
-    "npm-check-updates": "^11",
-    "projen": "^0.28.31",
+    "npm-check-updates": "^15",
+    "projen": "^0.62.13",
     "standard-version": "^9",
-    "ts-jest": "^27.1.1",
-    "typescript": "^4.5.4"
+    "ts-jest": "^27",
+    "typescript": "^4.8.3"
   },
   "peerDependencies": {
-    "@aws-cdk/aws-autoscaling": "^1.116.0",
-    "@aws-cdk/aws-codedeploy": "^1.116.0",
-    "@aws-cdk/aws-ec2": "^1.116.0",
-    "@aws-cdk/aws-iam": "^1.116.0",
-    "@aws-cdk/aws-lambda": "^1.116.0",
-    "@aws-cdk/aws-s3": "^1.116.0",
-    "@aws-cdk/aws-s3-assets": "^1.116.0",
-    "@aws-cdk/core": "^1.116.0",
-    "@aws-cdk/custom-resources": "^1.116.0",
+    "@aws-cdk/core": "^1.173.0",
     "constructs": "^3.2.27"
   },
-  "bundledDependencies": [],
+  "dependencies": {
+    "@aws-cdk/aws-autoscaling": "^1.173.0",
+    "@aws-cdk/aws-codedeploy": "^1.173.0",
+    "@aws-cdk/aws-ec2": "^1.173.0",
+    "@aws-cdk/aws-iam": "^1.173.0",
+    "@aws-cdk/aws-lambda": "^1.173.0",
+    "@aws-cdk/aws-s3": "^1.173.0",
+    "@aws-cdk/aws-s3-assets": "^1.173.0",
+    "@aws-cdk/core": "^1.173.0",
+    "@aws-cdk/custom-resources": "^1.173.0"
+  },
   "keywords": [
     "amazon",
     "aws",
@@ -92,8 +88,8 @@
   "version": "0.0.0",
   "jest": {
     "testMatch": [
-      "**/__tests__/**/*.ts?(x)",
-      "**/?(*.)+(spec|test).ts?(x)"
+      "<rootDir>/src/**/__tests__/**/*.ts?(x)",
+      "<rootDir>/(test|src)/**/*(*.)@(spec|test).ts?(x)"
     ],
     "clearMocks": true,
     "collectCoverage": true,
@@ -101,6 +97,7 @@
       "json",
       "lcov",
       "clover",
+      "cobertura",
       "text"
     ],
     "coverageDirectory": "coverage",
@@ -125,7 +122,7 @@
     "preset": "ts-jest",
     "globals": {
       "ts-jest": {
-        "tsconfig": "tsconfig.jest.json"
+        "tsconfig": "tsconfig.dev.json"
       }
     }
   },
@@ -148,6 +145,11 @@
     "exclude": [
       "props-physical-name:cdk-deployer.Ec2DeployerProps"
     ]
+  },
+  "resolutions": {
+    "@types/responselike": "1.0.0",
+    "got": "12.3.1",
+    "@types/prettier": "2.6.0"
   },
   "//": "~~ Generated by projen. To modify, edit .projenrc.js and run \"npx projen\"."
 }
