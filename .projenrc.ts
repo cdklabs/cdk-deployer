@@ -1,9 +1,11 @@
-const { awscdk } = require('projen');
+import { awscdk } from 'projen';
 
 const project = new awscdk.AwsCdkConstructLibrary({
   name: 'cdk-deployer',
+  projenrcTs: true,
   description: 'A construct library for deploying artifacts via CodeDeploy inside of a AWS CDK application.',
-  authorName: 'Jeff Gardner',
+  author: 'Jeff Gardner',
+  authorAddress: 'https://aws.amazon.com',
   majorVersion: 1,
   cdkVersion: '1.173.0',
   defaultReleaseBranch: 'main',
